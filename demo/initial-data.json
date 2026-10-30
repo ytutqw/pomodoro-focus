@@ -1,0 +1,61 @@
+{
+  "dataset": "Pomodoro Focus — начальный демонстрационный набор",
+  "users": [
+    {
+      "id": "M01",
+      "role": "mentor",
+      "name": "Алексей Демонстрационный",
+      "email": "mentor@example.test"
+    },
+    {
+      "id": "U01",
+      "role": "user",
+      "name": "Анна Учебная",
+      "email": "anna@example.test"
+    },
+    {
+      "id": "U02",
+      "role": "user",
+      "name": "Борис Учебный",
+      "email": "boris@example.test"
+    },
+    {
+      "id": "U03",
+      "role": "user",
+      "name": "Вера Учебная",
+      "email": "vera@example.test"
+    },
+    {
+      "id": "U04",
+      "role": "user",
+      "name": "Глеб Учебный",
+      "email": "gleb@example.test"
+    },
+    {
+      "id": "U05",
+      "role": "user",
+      "name": "Дарья Учебная",
+      "email": "daria@example.test"
+    }
+  ],
+  "groups": [
+    {
+      "id": "G01",
+      "name": "ИС-21",
+      "mentorId": "M01",
+      "memberIds": ["U01", "U02", "U03", "U04", "U05"]
+    }
+  ],
+  "assignments": [
+    {
+      "id": "A01",
+      "title": "Подготовиться к лабораторной",
+      "description": "Работа над учебным материалом в течение четырёх успешных Focus-сессий.",
+      "mentorId": "M01",
+      "groupId": "G01",
+      "requiredSessions": 4,
+      "deadlineOffsetDays": 7
+    }
+  ],
+  "sessions": []
+}
