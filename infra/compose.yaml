@@ -1,0 +1,21 @@
+name: pomodoro-focus
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: pomodoro_focus
+      POSTGRES_USER: pomodoro
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Укажите пароль в .env}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pomodoro -d pomodoro_focus"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
